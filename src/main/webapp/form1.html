@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" th:href="@{/css/main.css}"
+	href="../../css/main.css" />
+	
+</head>
+
+<body>
+<h2 align=center>基本表單範例</h2>
+<hr>
+
+<form action="test"  method="post">
+	<p>名字：<input name="input1" size=10 maxlength=20 value="蕭亞軒" type="text"></p>
+	<p>密碼：<input name="passwd" type=password size=8 maxlength=8 value=xyz type="text"></p>
+	<p><input type="submit" value=submit> <input type="reset"> </p>
+</form>
+
+<form action="test" method="post">
+		<input type="text" value="text" name="input1"> <input type="submit" value="submit">
+</form>
+
+<hr>
+</body>
+</html>
