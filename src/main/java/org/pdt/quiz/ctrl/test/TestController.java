@@ -28,35 +28,36 @@ public class TestController {
     @RequestMapping(path = "/test", method = {RequestMethod.POST, RequestMethod.GET})
     public String test(Map<String, Object> model, HttpServletRequest request) throws Exception {
         System.out.println(request.getMethod());
-        
+
         if(RequestMethod.GET.toString().equals(request.getMethod())) {
-            
-            
+
+
         }else {
             List<String> l = new ArrayList<String>();
             l.add("abc");
             l.add("abc1");
-            
+
             model.put("message", "Hello " + request.getParameter("input1"));
             model.put("prods",  l);
-            
+
             //ServletInputStream inputStream = request.getInputStream();
         }
-        
+
         return "test";
+
     }
 
-//    public void process(HttpServletRequest request, HttpServletResponse response, ServletContext servletContext,
-//            TemplateEngine templateEngine) throws IOException {
-//        // ProductService productService = new ProductService();
-//        // List<Product> allProducts = productService.findAll();
-//        
-//       
-//
-//        WebContext ctx = new WebContext(request, response, servletContext, request.getLocale());
-//        ctx.setVariable("prods", l);
-//
-//        templateEngine.process("test", ctx, response.getWriter());
-//    }
+    //    public void process(HttpServletRequest request, HttpServletResponse response, ServletContext servletContext,
+    //            TemplateEngine templateEngine) throws IOException {
+    //        // ProductService productService = new ProductService();
+    //        // List<Product> allProducts = productService.findAll();
+    //        
+    //       
+    //
+    //        WebContext ctx = new WebContext(request, response, servletContext, request.getLocale());
+    //        ctx.setVariable("prods", l);
+    //
+    //        templateEngine.process("test", ctx, response.getWriter());
+    //    }
 
 }

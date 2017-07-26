@@ -2,8 +2,10 @@ package org.pdt.quiz;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan("org.pdt.quiz")
 public class QuizMainEntry {
 	public static void main(String[] args) {
         SpringApplication.run(QuizMainEntry.class, args);

@@ -15,12 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RestController
 public class HelloRSController {
-
-    @RequestMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
-    }
-
     @RequestMapping("/rsTest")
     public String rsTest() {
         return "rsTest!";

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot Thymeleaf Hello World Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<link rel="stylesheet" th:href="@{/css/main.css}"
+	href="../../css/main.css" />
+
+</head>
+<body>
+
+	<div th:if="${prods != null}">
+		<table>
+			<tr class="label">
+				<th>NAME</th>
+			</tr>
+			<tr th:each="prod : ${prods}">
+				<td th:text="${prod}">Onions</td>
+			</tr>
+		</table>
+	</div>
+
+	<div th:unless="${prods != null}">
+		<form action="test" method="post">
+			<p>
+				名字：<input name="input1" size="10" maxlength="20" value="蕭亞軒"
+					type="text" />
+			</p>
+			<p>
+				密碼：<input name="passwd" type="password" size="8" maxlength="8"
+					value="xyz" />
+			</p>
+			<p>
+				<input type="submit" value="submit"/> <input type="reset"/>
+			</p>
+		</form>
+	</div>
+
+	<script type="text/javascript"
+		src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
